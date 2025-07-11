@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 border border-blue-100 transition hover:shadow-lg;
+  }
+
+  .heading-primary {
+    @apply text-4xl sm:text-5xl font-extrabold text-blue-800 mb-8 text-center tracking-tight drop-shadow;
+  }
+
+  .subtext {
+    @apply text-gray-600 text-sm mt-1;
+  }
+
+  .spin-slow {
+    animation: logo-spin 20s linear infinite;
+  }
+
+  /* 🌙 Dark Mode Variants */
+  .dark .card {
+    @apply bg-gray-800 text-white border-gray-600;
+  }
+
+  .dark .heading-primary {
+    @apply text-white;
+  }
+
+  .dark .subtext {
+    @apply text-gray-400;
+  }
+}
+
+/* 🔁 Animations */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🎨 Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
