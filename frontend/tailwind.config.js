@@ -1,21 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  // 🌙 Enable dark mode via .dark class
-  darkMode: "class",
+  darkMode: "class", // or "media" if you want system-based
 
-  // 📁 Files Tailwind will scan for class names and directives
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx,css}", // ✅ added css for @apply support
+    "./src/**/*.{js,jsx,ts,tsx,css}",
   ],
 
-  // 🎨 Theme Customizations
   theme: {
     extend: {
       colors: {
-        primary: "#1e3a8a",     // Dark blue
-        secondary: "#2563eb",   // Medium blue
-        accent: "#38bdf8",      // Light blue
+        primary: "#1e3a8a",
+        secondary: "#2563eb",
+        accent: "#38bdf8",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
@@ -35,10 +32,5 @@ export default {
     },
   },
 
-  // 🔌 Optional plugins (add when needed)
-  plugins: [
-    // require('@tailwindcss/forms'),
-    // require('@tailwindcss/typography'),
-    // require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [],
 };
