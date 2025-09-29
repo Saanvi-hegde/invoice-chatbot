@@ -1,56 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer components {
-  .card {
-    @apply bg-white rounded-xl shadow-md p-6 border border-blue-100 transition hover:shadow-lg;
-  }
-
-  .heading-primary {
-    @apply text-4xl sm:text-5xl font-extrabold text-blue-800 mb-8 text-center tracking-tight drop-shadow;
-  }
-
-  .subtext {
-    @apply text-gray-600 text-sm mt-1;
-  }
-
-  .spin-slow {
-    animation: logo-spin 20s linear infinite;
-  }
-
-  /* 🌙 Dark Mode Variants */
-  .dark .card {
-    @apply bg-gray-800 text-white border-gray-600;
-  }
-
-  .dark .heading-primary {
-    @apply text-white;
-  }
-
-  .dark .subtext {
-    @apply text-gray-400;
-  }
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* 🔁 Animations */
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f9f9f9;
 }
 
-/* 🎨 Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px;
+.dark body {
+  background-color: #111827;
+  color: #f1f5f9;
 }
-::-webkit-scrollbar-thumb {
-  background-color: rgba(100, 116, 139, 0.4);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
+
+/* Optional utility classes */
+.card {
+  @apply bg-white dark:bg-gray-800 p-5 rounded-lg shadow border;
 }
